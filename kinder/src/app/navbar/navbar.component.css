@@ -1,0 +1,23 @@
+.navbar-brand {
+    font-weight: 600;
+    color: brown;
+    font-size: 25px;
+}
+
+ul,
+li {
+    color: brown;
+    list-style: none;
+    font-weight: 600;
+}
+
+ul,
+li:hover {
+    font-weight: 1000;
+    color: brown;
+}
+
+button {
+    border-radius: 15px;
+    font-weight: 600;
+}

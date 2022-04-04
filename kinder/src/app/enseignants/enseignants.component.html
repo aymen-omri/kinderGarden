@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="text-center my-5">
+        <input type="text" placeholder="search..." [(ngModel)]="search" (keyup)="filter()" />
+    </div>
+    <div class="row my-5">
+        <div class="col" *ngFor="let elem of filterTab">
+            <div class="card" style="width:100%;">
+                <img src="{{elem.image}}" alt="img" class="card-img-top" />
+                <h5 class="card-title">{{elem.name}}</h5>
+                <p class="card-text">{{elem.job}}</p>
+            </div>
+        </div>
+    </div>
+</div>

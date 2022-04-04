@@ -1,0 +1,54 @@
+<div class="text-center mt-3">
+    <a href="/login">You have an account ? Sign in here</a>
+</div>
+
+
+<div class="container">
+    <form class="was-validated my-5" [formGroup]="userForm" (ngSubmit)="submitUser()">
+        <input type="text" class="form-control mt-3" placeholder="votre nom" formControlName="nom" required>
+        <div class="invalid-feedback">champ obligatoire</div>
+        <input type="text" class="form-control mt-3" placeholder="votre prenom" formControlName="prenom" required>
+        <div class="invalid-feedback">champ obligatoire</div>
+        <input type="email" class="form-control mt-3" placeholder="votre email" formControlName="email" required>
+        <div class="invalid-feedback">champ obligatoire</div>
+        <input type="password" class="form-control mt-3" placeholder="votre mot de passe" formControlName="password" required>
+        <div class="invalid-feedback">champ obligatoire</div>
+        <input type="password" class="form-control mt-3" formControlName="verifPassword" placeholder="confirmez votre mot de passe" required>
+        <div class="invalid-feedback">champ obligatoire</div>
+        <div class="form-check form-check-inline">
+            <input type="radio" id="homme" formControlName="gender">
+            <label for="homme">Homme</label>
+        </div>
+        <div class="form-check form-check-inline mt-3">
+            <input type="radio" id="femme" formControlName="gender">
+            <label for="homme">Femme</label>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <input type="date" class="form-control" formControlName="date">
+            </div>
+            <div class="col">
+                <select class="form-select" formControlName="level">
+                    <option>TPS</option>
+                    <option>PS</option>
+                    <option>MS</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="input-group mt-3">
+            <span class="input-group-text">+216</span>
+            <input type="number" class="form-control" placeholder="Votre num de tel" formControlName="tel">
+        </div>
+        <input type="text" class="form-control mt-3" placeholder="votre add " formControlName="addresse">
+        <input type="number" class="form-control mt-3" placeholder="code postale" formControlName="code">
+        <div class="text-center">
+            <button type="button" class="btn btn-outline-primary mt-3">Valider</button>&nbsp;
+            <button type="button" class="btn btn-outline-warning mt-3" (click)="resetForm()">Annuler</button>
+        </div>
+
+
+
+
+    </form>
+</div>
